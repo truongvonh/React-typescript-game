@@ -1,0 +1,13 @@
+# for local development
+version: "3.7"
+services:
+  react-game:
+    build:
+      context: .
+      target: "develop-stage"
+    ports:
+      - "3000:3000"
+    volumes:
+      - ".:/app"
+
+    command: /bin/sh -c "yarn && yarn start"
