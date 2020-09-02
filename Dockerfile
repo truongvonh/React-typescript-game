@@ -2,6 +2,7 @@
 FROM node:13.14-alpine as develop-stage
 WORKDIR /app
 COPY package*.json ./
+COPY yarn.lock ./
 #RUN yarn global add @quasar/cli
 COPY . .
 # build stage
